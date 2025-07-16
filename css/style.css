@@ -1,0 +1,971 @@
+.Header {
+    position: sticky;
+    top: 0;
+    background: #651D16;
+    z-index: 1000;
+}
+
+.Header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+
+.Header .logo {
+    display: block;
+    width: 118px;
+    height: 44px;
+    background: url(../images/logo_white_type_02.png) no-repeat;
+    transition: 0.5s;
+}
+
+.Header.on .logo {
+    background: url(../images/logo_red_type_02.png) no-repeat;
+}
+
+.Header .Gnb {}
+
+.Header .Gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.Header .Gnb>ul>li>a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+}
+
+.Header .Gnb>ul>li {
+    position: relative;
+    line-height: 100px;
+}
+
+.Header .Gnb>ul>li::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 3px;
+    background: #be161e;
+}
+
+.Header .Gnb>ul>li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.Header .Gnb>ul>li .snb {
+    position: absolute;
+    top: 100px;
+    left: -40px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px 40px 30px 40px;
+
+    display: none;
+}
+
+.Header .Gnb>ul>li:hover .snb {
+    display: block;
+}
+
+.Header .Gnb>ul>li .snb a {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.Header .login {
+    display: flex;
+    gap: 30px;
+}
+
+.Header .login a {
+    font-size: 15px;
+    color: #fff;
+}
+
+.MainVisual {
+    position: relative;
+}
+
+.MainVisual .main_slide .itm {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+
+.MainVisual .main_slide .itm .slide-img {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.MainVisual .main_slide .itm01 .slide-img {
+    background: url(../images/main_visual01.png) no-repeat center top/cover;
+}
+
+.MainVisual .main_slide .itm02 .slide-img {
+    background: url(../images/main_visual02.png) no-repeat center top/cover;
+}
+
+.MainVisual .main_slide .itm03 .slide-img {
+    background: url(../images/main_visual03.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .main_slide .itm04 .slide-img {
+    background: url(../images/main_visual04.png) no-repeat center top/cover;
+}
+
+.MainVisual .main_slide .itm05 .slide-img {
+    background: url(../images/main_visual05.png) no-repeat center top/cover;
+}
+
+.MainVisual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+}
+
+.MainVisual .arrows li {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.MainVisual .arrows .left {
+    position: absolute;
+    top: -32px;
+    left: 15px;
+    width: 37px;
+    height: 75px;
+    background: url(../images/btn_main_visual_prev_off.png);
+}
+
+.MainVisual .arrows .left:hover {
+    background: url(../images/btn_main_visual_prev_on.png);
+}
+
+.MainVisual .arrows .right {
+    position: absolute;
+    top: -32px;
+    right: 15px;
+    width: 37px;
+    height: 75px;
+    background: url(../images/btn_main_visual_next_off.png);
+}
+
+.MainVisual .arrows .right:hover {
+    background: url(../images/btn_main_visual_next_on.png);
+}
+
+.MainVisual .dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 30px;
+}
+
+.MainVisual .dots li span {
+    font-size: 0;
+}
+
+.MainVisual .dots li {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.MainVisual .dots li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: 0.5s linear;
+}
+
+/* .MainVisual .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0, 0.75, 0.01, -0.13);
+} */
+
+.MainVisual .dots li:hover::before {
+    width: 30px;
+    height: 30px;
+}
+
+.MainVisual .dots li.on::before {
+    width: 30px;
+    height: 30px;
+}
+
+.MainVisual .dots li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.MainItm {
+    position: relative;
+}
+
+/* .MainItm .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0, 0.75, 0.01, -0.13);
+} */
+
+.MainItm .inner {}
+
+.MainItm .detail .txt {
+    position: absolute;
+    top: 100px;
+    left: -400px;
+    opacity: 0;
+    width: 300px;
+    z-index: 999;
+}
+
+.MainItm .detail .txt h3 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+}
+
+.MainItm .detail.swiper-slide-next .txt {
+    animation: op 4s .5s both;
+}
+
+.MainItm .detail figure img {
+    width: 100%;
+    transform: scale(0.7);
+    transform-origin: 0 50%;
+}
+
+.MainItm .detail.swiper-slide-next figure img {
+    transform-origin: 100% 50%;
+    transform: scale(1);
+    transition: 0.5s;
+    animation: sc 4s 1s both;
+}
+
+
+@keyframes sc {
+    0% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+}
+
+.MainItm .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    padding: 0 20px;
+    /* 좌우 여백 */
+}
+
+.MainItm .arrows a {
+    display: inline-block;
+    padding: 10px;
+    background: #980101;
+    border-radius: 5px;
+}
+
+.MainItm .arrows a img {
+    display: block;
+    width: 24px;
+    /* 아이콘 크기 조절 */
+    height: 24px;
+}
+
+
+.MainBenefit {
+    background: url(../images/main_benefit_obj_01.jpg) no-repeat 100px -100px;
+}
+
+.MainBenefit .benefit_wrap {
+    width: calc((100% - 1440px) / 2 + 1425px);
+    background: url(../images/main_benefit_visual.jpg) no-repeat left top/cover;
+    margin: 0 0 0 auto;
+    min-height: 400px;
+    padding: 100px 0;
+}
+
+.MainBenefit .benefit_wrap .inner {
+    margin: 0 0 0 0;
+}
+
+.MainBenefit h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.MainBenefit .title {
+    margin: 0 0 40px 0;
+}
+
+.MainBenefit .title p {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.MainBenefit .list {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.MainBenefit .list li {
+    text-align: center;
+}
+
+.MainBenefit .list img {
+    margin: 0 0 40px 0;
+}
+
+.MainBenefit .list strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.MainBenefit .list p {
+    font-size: 15px;
+    color: #f2f2f2;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.MainReword {
+    position: relative;
+}
+
+.MainReword::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100px;
+    width: 100px;
+    height: 150px;
+    transform: rotate(-30deg);
+    background: url(../images/btn_main_visual_next_on.png) no-repeat right top;
+}
+
+.MainReword .inner {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.MainReword .title {
+    position: relative;
+    border: 4px solid #222;
+    min-height: 300px;
+}
+
+.MainReword .title .case {
+    position: absolute;
+    top: -4px;
+    bottom: 50px;
+    left: -4px;
+    right: 50px;
+    background: #fff;
+}
+
+.MainReword h2 {
+    margin: 0 0 20px 0;
+}
+
+.MainReword h2 span {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.MainReword h2 strong {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.MainReword .title p {
+    margin: 0 0 10px 0;
+}
+
+.MainReword .title .btn {
+    display: inline-block;
+    padding: 8px 15px 6px 15px;
+    background: #222;
+    color: #fff;
+    font-size: 15px;
+}
+
+.MainReword .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* mc : #be161e sc : #907354*/
+.MainReword .list li::before {
+    content: attr(data-num);
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #907354;
+
+
+}
+
+.MainOrder {
+    padding: 0 0 1px 0;
+}
+
+.MainOrder .order_wrap {
+    width: calc((100% - 1440px) / 2 + 1425px);
+    background: #907354;
+}
+
+.MainOrder .order_wrap .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 0 auto;
+    padding: 0 0 0 30px;
+}
+
+.MainOrder .order_wrap .icon01 {
+    background: #907354;
+}
+
+.MainOrder .order_wrap .icon02 {
+    background: #333333;
+}
+
+.MainOrder .order_wrap .icon03 {
+    background: #be161e;
+}
+
+.MainOrder .order_wrap .list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px 40px 40px;
+    color: #fff;
+}
+
+.MainOrder .order_wrap .list .txt {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+.MainOrder .order_wrap .txt strong {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.MainOrder .order_wrap li .arrow {
+    position: relative;
+    margin: auto 0 0 0;
+    width: 60px;
+    transition: 0.5s;
+}
+
+.MainOrder .order_wrap li:hover .arrow {
+    width: 80px;
+}
+
+.MainOrder .order_wrap li .icon {
+    transition: 0.5s;
+}
+
+.MainOrder .order_wrap li:hover .icon {
+    transform: translate(0, -20px);
+}
+
+.MainOrder .order_wrap .arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+.MainOrder .order_wrap .arrow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+.Footer {
+    background: #333333;
+    padding: 50px;
+    color: #f9f9f9;
+}
+
+.Footer .top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+}
+
+.Footer .top .left {
+    display: flex;
+    gap: 10px;
+}
+
+.Footer .top .left a {
+    display: block;
+    line-height: 28px;
+    border: 1px solid #666;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.Footer .top .right {
+    display: flex;
+    gap: 31px;
+    line-height: 28px;
+}
+
+.Footer .top .right li {
+    position: relative;
+}
+
+.Footer .top .right li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: #666;
+}
+
+.Footer .top .right a {
+    font-size: 15px;
+}
+
+.Footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.Footer .author ul {
+    margin: 0 0 30px 0;
+    line-height: 20px;
+}
+
+.Footer .author ul span {
+    font-size: 0;
+    padding: 0 8px;
+}
+
+.Footer .author ul span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #666;
+}
+
+.Footer .sns {
+    display: flex;
+    gap: 5px;
+}
+
+.Footer .sns i {
+    padding: 8px;
+    background: #666;
+    color: #ddd;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.mobile_btn {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .Header h1 {
+        position: fixed;
+        z-index: 1000;
+        padding: 0 0 0 15px;
+    }
+
+    .Header.on .logo {
+        background: url(../images/logo_white_type_02.png) no-repeat;
+    }
+
+    .Header .Gnb {
+        position: fixed;
+        inset: 0 auto 0 100%;
+        background: #444;
+        width: 100%;
+
+        transition: 0.5s;
+    }
+
+    .Header .Gnb.on {
+        inset: 0 auto 0 0;
+    }
+
+    .Header .Gnb>ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 150px 30px 0 30px;
+    }
+
+    .Header .Gnb>ul>li>a {
+        border-bottom: 1px solid #666;
+    }
+
+    .Header .Gnb>ul>li {
+        line-height: 40px;
+    }
+
+    .Header .Gnb>ul>li::after {
+        bottom: 0;
+        height: 2px;
+    }
+
+    .Header .Gnb>ul>li .snb {
+        position: static;
+        background: rgba(0, 0, 0, 1);
+        padding: 0 0 0 0;
+    }
+
+    .Header .Gnb>ul>li:hover .snb {
+        display: none;
+    }
+
+    .Header .Gnb>ul>li .snb a {
+        padding: 0 0 0 15px;
+    }
+
+    .Header .login {
+        display: none;
+    }
+
+    .mobile_btn {
+        display: block;
+
+        position: fixed;
+        inset: 30px 30px auto auto;
+        z-index: 1000;
+        width: 30px;
+        height: 30px;
+        background: #ddd;
+        border-radius: 5px;
+    }
+
+    .mobile_btn::before,
+    .mobile_btn::after {
+        content: "";
+        position: absolute;
+        inset: 14px 5px auto 5px;
+        height: 2px;
+        background: #444;
+    }
+
+    .mobile_btn.on::before {
+        transform: rotate(45deg);
+        transition: 0.5s 0.2s;
+    }
+
+    .mobile_btn.on::after {
+        transform: rotate(-225deg);
+        transition: 0.5s 0.6s;
+    }
+
+    .mobile_btn button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .mobile_btn button::before,
+    .mobile_btn button::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: #444;
+    }
+
+    .mobile_btn button::before {
+        inset: 7px 5px auto 5px;
+    }
+
+    .mobile_btn button::after {
+        inset: auto 5px 7px 5px;
+    }
+
+    .mobile_btn.on button::before {
+        display: none;
+    }
+
+    .mobile_btn.on button::after {
+        display: none;
+    }
+
+    .MainVisual .main_slide .itm {
+        height: 500px;
+    }
+
+    .MainVisual .main_slide .itm01 .slide-img {
+        background: url(../images/main_visual01.png) no-repeat center top/cover;
+    }
+
+    .MainVisual .main_slide .itm02 .slide-img {
+        background: url(../images/main_visual02.png) no-repeat center top/cover;
+    }
+
+    .MainVisual .main_slide .itm03 .slide-img {
+        background: url(../images/main_visual03.jpg) no-repeat left top/cover;
+    }
+
+    .MainVisual .main_slide .itm04 .slide-img {
+        background: url(../images/main_visual04.png) no-repeat left top/cover;
+    }
+
+    .MainVisual .main_slide .itm05 .slide-img {
+        background: url(../images/main_visual05.png) no-repeat left top/cover;
+    }
+
+    .MainItm .detail .txt {
+        position: static;
+        opacity: 1;
+        width: auto;
+        margin: 0 0 30px 0;
+    }
+
+    .MainItm .detail .txt h3 {
+        font-size: 30px;
+        margin: 0 0 20px 0;
+    }
+
+    .MainItm .detail figure img {
+        transform: scale(1);
+        transform-origin: 0 0;
+    }
+
+    .MainItm .arrows {
+        z-index: 998;
+    }
+
+    .MainBenefit .benefit_wrap {
+        width: auto;
+    }
+
+    .MainBenefit .list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .MainReword {
+        overflow-x: hidden;
+    }
+
+    .MainReword::before {
+        right: 15px;
+    }
+
+    .MainReword .inner {
+        grid-template-columns: 1fr;
+    }
+
+    .MainReword .title .case {
+        top: -6px;
+        left: -6px;
+    }
+
+    .MainReword .list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .MainOrder .order_wrap {
+        width: auto;
+    }
+
+    .MainOrder .order_wrap .inner {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 0 0 0;
+    }
+
+    .Footer {
+        /* 상하 50px, 좌측 15px, 우측 5px 패딩 설정 (오른쪽 패딩 줄여서 아이콘이 더 오른쪽으로 이동) */
+        padding: 50px 5px 50px 15px;
+        background-color: #333333;
+        /* 배경색 어두운 회색 */
+    }
+
+    .Footer .sns {
+        display: flex;
+        /* 플렉스 박스로 아이템 배치 */
+        gap: 15px;
+        /* 아이콘들 사이 간격 15px */
+        justify-content: flex-end;
+        /* 아이콘들을 오른쪽 끝으로 정렬 */
+        padding: 0;
+        /* 리스트 내 여백 제거 */
+        list-style: none;
+        /* 기본 리스트 스타일 제거 */
+    }
+
+    .Footer .sns li a {
+        display: inline-block;
+        /* 인라인 블록으로 크기 조정 가능 */
+        width: 40px;
+        /* 가로 40px */
+        height: 40px;
+        /* 세로 40px */
+    }
+
+    .Footer .sns li img {
+        width: 100%;
+        /* 부모 a 태그 너비에 맞춤 */
+        height: 100%;
+        /* 부모 a 태그 높이에 맞춤 */
+        object-fit: contain;
+        /* 이미지 비율 유지하면서 꽉 채우기 */
+        display: block;
+        /* 인라인 요소인 img의 아래 공백 제거 */
+    }
+
+    .Footer .top {
+        flex-direction: column;
+        /* 상위 컨테이너를 세로 방향으로 배치 */
+        gap: 30px;
+        /* 각 요소 사이 간격 30px */
+    }
+
+    /* 필요 시 기존 스타일 추가 */
+
+    .Footer .top .left {
+        flex-direction: column;
+        /* 세로 방향 배치 */
+        gap: 4px;
+        /* 요소 간격 4px */
+    }
+
+    .Footer .top .left a {
+        text-align: center;
+        /* 링크 텍스트 가운데 정렬 */
+    }
+
+    .Footer .top .right {
+        display: grid;
+        /* 그리드 레이아웃 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2열 균등 배치 */
+        gap: 0;
+        /* 그리드 아이템 간 간격 없음 */
+    }
+
+    .Footer .top .right li~li::before {
+        display: none;
+        /* li 요소들 사이에 기본 구분선 숨김 */
+    }
+
+    .Footer .bottom {
+        flex-direction: column;
+        /* 세로 방향 배치 */
+        gap: 30px;
+        /* 요소 간격 30px */
+    }
+
+    .Footer .author ul span {
+        display: block;
+        /* 블록 요소로 변경 */
+        padding: 0;
+        /* 패딩 제거 */
+    }
+
+    .Footer .author ul span::before {
+        display: none;
+        /* before 가상 요소 숨김 */
+    }
+}
