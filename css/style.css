@@ -662,11 +662,25 @@
     border-radius: 50%;
 }
 
+.to_top {
+    position: fixed;
+    bottom: 200px;
+    right: -120px;
+}
+
+.to_top.on {
+    right: 120px;
+}
+
+.to_top button {
+    width: 40px;
+    height: 40px;
+    background: #222;
+}
+
 .mobile_btn {
     display: none;
 }
-
-
 
 @media (max-width: 768px) {
     .Header h1 {

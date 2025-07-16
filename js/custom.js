@@ -95,3 +95,31 @@ $(function () {
     });
 
 });
+
+$(function () {
+    // 문서가 준비되면 실행 (DOM 로드 후 실행)
+
+    $(window).on('scroll', function () {
+        // 사용자가 스크롤할 때마다 실행
+
+        let scr = $(window).scrollTop();
+        // 현재 스크롤 위치를 가져옴 (위에서부터 얼마나 내렸는지)
+
+        if (scr > 500) {
+            // 스크롤이 500px 이상 내려갔을 때
+            $('.to_top').addClass('on');
+            // 'to_top' 클래스가 있는 요소에 'on' 클래스 추가 (보이게 하기 등)
+        } else {
+            // 스크롤이 500px 이하일 때
+            $('.to_top').removeClass('on');
+            // 'on' 클래스 제거 (숨기기 등)
+        }
+    });
+
+    $('.to_top').on('click', function () {
+        // 'to_top' 버튼을 클릭했을 때
+
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+        // 페이지를 맨 위(0 위치)로 부드럽게 스크롤 (1000ms = 1초 동안)
+    });
+});
