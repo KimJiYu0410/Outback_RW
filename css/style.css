@@ -252,6 +252,8 @@
     font-size: 60px;
     font-weight: 700;
     margin: 0 0 50px 0;
+    color: #222222;
+
 }
 
 .MainItm .detail.swiper-slide-next .txt {
@@ -308,6 +310,7 @@
     }
 }
 
+/* 좌우화살표버튼 */
 .MainItm .arrows {
     position: absolute;
     top: 50%;

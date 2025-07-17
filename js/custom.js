@@ -66,14 +66,16 @@ $(function () {
     });
 
     // 아이템 슬라이드 좌우 화살표 클릭 이벤트
-    $('.MainItm .arrows a.left').on('click', function (e) {
-        e.preventDefault(); // a 태그 기본 이동 막기
-        ItmSlide.slidePrev(); // 이전 슬라이드로 이동
+    // 왼쪽 화살표
+    $('.MainItm .arrows li:first-child a').on('click', function (e) {
+        e.preventDefault();
+        ItmSlide.slidePrev();
     });
 
-    $('.MainItm .arrows a.right').on('click', function (e) {
+    // 오른쪽 화살표
+    $('.MainItm .arrows li:last-child a').on('click', function (e) {
         e.preventDefault();
-        ItmSlide.slideNext(); // 다음 슬라이드로 이동
+        ItmSlide.slideNext();
     });
 
     // 모바일 메뉴 버튼 클릭 시 메뉴 토글
