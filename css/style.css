@@ -985,4 +985,14 @@
         display: none;
         /* before 가상 요소 숨김 */
     }
+
+    .to_top {
+        position: fixed;
+        bottom: 200px;
+        right: -120px;
+    }
+
+    .to_top.on {
+        right: 0;
+    }
 }
